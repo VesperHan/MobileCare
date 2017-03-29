@@ -145,6 +145,9 @@ public class MainActivity extends AppCompatActivity {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         final AlertDialog dialog = builder.create();
         View view = View.inflate(this, R.layout.dialog_init_pwd, null);
+        final EditText firRow = (EditText) view.findViewById(R.id.et_initFirst);
+        final TextView title = (TextView) view.findViewById(R.id.alert_title);
+        title.setText("密码校验");
         final EditText secRow = (EditText) view.findViewById(R.id.et_initConfirm);
         secRow.setVisibility(view.GONE);
         dialog.setView(view);
@@ -158,8 +161,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String psd = SharedPreUtil.getString(getApplicationContext(), ConstantValue
                         .MOBILE_SAFE_PSD, "");
-                if (secRow.getText().toString().equals(psd)) {
+                if (firRow.getText().toString().equals(psd)) {
+                    ToastUtil.show(getApplicationContext(), "密码校验成功");
                     enterPhoneSecurity();
+                    dialog.dismiss();
                 } else {
                     ToastUtil.show(getApplicationContext(), "密码输入错误");
                 }

@@ -5,6 +5,7 @@
               android:orientation="vertical">
 
     <TextView
+        android:id="@+id/alert_title"
         style="@style/TitleStyle"
         android:text="初始化密码"
         />
