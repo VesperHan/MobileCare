@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:mobilecare="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="设置中心"/>
+
+    <com.vesper.mobilecare.View.SettingItemView
+        android:id="@+id/siv_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobilecare:destitle="自动更新设置"
+        mobilecare:desoff="自动更新已关闭"
+        mobilecare:deson="自动更新已开启"
+        xmlns:mobilecare="http://schemas.android.com/apk/res/com.vesper.mobilecare">
+    </com.vesper.mobilecare.View.SettingItemView>
+    <com.vesper.mobilecare.View.SettingItemView
+        android:id="@+id/siv_phoneLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        mobilecare:destitle="电话归属地的显示设置"
+        mobilecare:desoff="归属地的显示已关闭"
+        mobilecare:deson="归属地的显示已开启"
+        xmlns:mobilecare="http://schemas.android.com/apk/res/com.vesper.mobilecare">
+    </com.vesper.mobilecare.View.SettingItemView>
+</LinearLayout>

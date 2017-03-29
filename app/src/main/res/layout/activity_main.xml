@@ -4,4 +4,29 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent">
 
+    <TextView
+        android:text="功能列表"
+        style="@style/TitleStyle"/>
+    <com.vesper.mobilecare.View.FocusTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:ellipsize="marquee"
+        android:textSize="20sp"
+        android:padding="5dp"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:text="这是一个跑马灯"
+        />
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:numColumns="3"
+        android:verticalSpacing="15dp"
+        android:id="@+id/gv_list"
+        android:listSelector="@android:color/transparent"
+        >
+    </GridView>
 </LinearLayout>
