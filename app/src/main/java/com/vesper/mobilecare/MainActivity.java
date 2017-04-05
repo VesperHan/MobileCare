@@ -120,10 +120,10 @@ public class MainActivity extends AppCompatActivity {
 
                 if (!TextUtils.isEmpty(psd) && !TextUtils.isEmpty(confirm)) {
                     if (psd.equals(confirm)) {
-
                         dialog.dismiss();
                         SharedPreUtil.putString(getApplicationContext(), ConstantValue
                                 .MOBILE_SAFE_PSD, psd);
+                        enterPhoneSecurity();
                     } else {
                         ToastUtil.show(getApplicationContext(), "密码输入不一致");
                     }
@@ -179,7 +179,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void enterPhoneSecurity() {
-
+        Intent intent = new Intent(getApplicationContext(),SetupOverActivity.class);
+        startActivity(intent);
     }
 
     private void initUI() {

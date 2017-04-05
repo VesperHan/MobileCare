@@ -12,4 +12,6 @@ public class ConstantValue {
 	 * 是否设置密码key
 	 */
 	public static final String MOBILE_SAFE_PSD = "mobile_care_psd";
+
+	public static final String SETUP_OVER = "setup_over";
 }
